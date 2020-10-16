@@ -15,3 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', "App\Http\Controllers\UserController@test");
 Route::get('/test', "App\Http\Controllers\UserController@test1")->middleware("test");
+ 
+Route::get('atieh', function(){
+    $people = ['ali','ati','abbas'];
+    return compact('people');
+});
